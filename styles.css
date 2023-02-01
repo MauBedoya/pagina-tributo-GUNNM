@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@100&family=Quicksand:wght@500&display=swap');
+
+/** general styles */
+:root {
+  --body-color: #eeee;
+  --unfolded-card: 28rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--body-color);
+}
+main {
+  font-family: 'Quicksand', sans-serif;
+  margin: auto;
+}
+section {
+  padding-top: 2rem;
+}
+
+/** title section */
+#title {
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  text-align: center;
+  margin-top: 50px;
+}
+#aka {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px auto;
+}
+
+/** figures general styles */
+figure {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  font-style: italic;
+}
+hr {
+  margin: 0.4rem 0;
+}
+figcaption {
+  display: block;
+  font-size: 0.8rem;
+}
+
+/** main img section */
+#img-div {
+  display: flex;
+  flex-direction: column;
+  max-width: 80vw;
+  margin: auto;
+  padding: 1rem;
+  background-color: white;
+}
+#image { /*! solo para pasar las pruebas de FCC */
+  max-width: 100%;
+  height: 100%;
+}
+
+/** tribute info section */
+#tribute-info {
+  max-width: 80vw;
+  margin: auto;
+  text-align: justify;
+}
+
+/** sections */
+.topic-section {
+  width: 90vw;
+  margin: auto;
+}
+
+/** character cards */
+#cards-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.char-article {
+  width: calc(var(--unfolded-card) / 2);
+  margin-top: 0.625rem;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+.char-article > h3 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.char-article:hover {
+  width: var(--unfolded-card);
+}
+.char-card {
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.card-figure {
+  min-width: calc(var(--unfolded-card) / 2);
+  padding: 1rem;
+  background-color: white;
+}
+.card-img {
+  width: 100%;
+  border-radius: 10px;
+}
+.card-description {
+  display: flex;
+  align-items: center;
+  min-width: calc(var(--unfolded-card) / 2);
+  min-height: 100%;
+  font-size: 90%;
+  background-color: white;
+}
+.card-description p {
+  padding: 0 1rem;
+}
+
+/** arcos */
+.arco {
+  max-width: 55rem;
+  margin: auto;
+}
+.arco h3 {
+  text-align: center;
+  margin: 2rem auto 1.25rem auto;
+}
+.arco-content {
+  display: flex;
+  align-items: center;
+}
+.arc-par {
+  width: 50%;
+}
+.arc-figure {
+  width: 50%;
+  height: 21.125rem;
+  padding: 1rem;
+  background-color: white;
+  margin: 0 2rem;
+  text-align: center;
+}
+.arc-img {
+  height: 15.5rem;
+  margin: auto;
+  transition: 0.5s ease-in-out;
+}
+.arc-img:hover {
+  scale: 1.5;
+}
+
+/* tabla de tomos */
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 44rem;
+  margin: 0px auto 1.25rem auto;
+  letter-spacing: 1px;
+}
+thead th:nth-child(1) {
+  width: 5.68rem;
+}
+table.tabla-arcos th {
+  background-color: rgba(44, 94, 169, .25);
+  text-align: center;
+  border: 1px solid rgba(20,50,90,.25);
+  padding: 0.375rem;
+}
+table.tabla-arcos td {
+  background-color: rgb(181, 207, 247, .25);
+  text-align: center;
+  border: 1px solid rgba(20,50,90,.25);
+}
+table caption {
+  margin-top: 0px;
+  padding: 0.625rem;
+  font-size: 1.125rem;
+}
+
+/* related section */
+
+.topic-section ul {
+  width: 70vw;
+  margin: 1rem auto 0 auto;
+}
+
+/* blockquote */
+blockquote {
+  width: 50vw;
+  margin: 1.5rem auto;
+  text-align: center;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px 1px rgb(29 14 98 / 20%);
+}
+
+/* footer */
+#reference {
+  margin: 0 2rem;
+}
+#reference a{
+  color: black;
+}
+#reference a:visited {
+  color: black;
+}
+footer {
+  background-color: rgb(70, 70, 70);
+}
+address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1.2rem 0;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 1005px) {
+  html {
+    font-size: 95%;
+  }
+}
+@media (max-width: 991px) {
+  html {
+    font-size: 90%;
+  }
+  .arco-content {
+    flex-direction: column;
+  }
+  .arc-par {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+  .arc-figure {
+    min-width: 23.15rem;
+  }
+  .arc-img {
+    height: 14.5rem;
+  }
+}
+@media (max-width: 767px) {
+  html {
+    font-size: 85%;
+  }
+}
+@media (max-width: 575px) {
+  html {
+    font-size: 80%;
+  }
+  #cards-layout {
+    flex-direction: column;
+  }
+  table {
+    width: 25rem;
+    font-size: 0.7rem;
+  }
+  thead th:nth-child(1) {
+    width: 2.68rem;
+  }
+  blockquote {
+    min-width: 70%;
+  }
+}
+@media (max-width: 360px) {
+  :root {
+    --unfolded-card: 22rem;
+  }
+  .char-article {
+    font-size: 70%;
+  }
+  table {
+    width: 22rem;
+    font-size: 0.6rem;
+  }
+}
